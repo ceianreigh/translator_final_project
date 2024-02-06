@@ -29,4 +29,4 @@ dest_language = input("Enter the language code to be used for translation: ")
 translated_text = translate_text(text, dest_language)
 
 # print the translated text
-print("Translated text: ", translated_text)
+print("Translated text:", translated_text)
