@@ -17,6 +17,7 @@ def translate_text(text, dest_language):
 
 
 # ask the user to input the text they would like to translate
+text = input("Enter the text to be translated: ")
 
 # print the supported languages
 
