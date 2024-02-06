@@ -20,7 +20,7 @@ def translate_text(text, dest_language):
 text = input("Enter the text to be translated: ")
 
 # print the supported languages
-print("Supported languages: ", LANGUAGES)
+print("Supported languages:", LANGUAGES)
 
 # ask the user to input the language they would like to translate to
 dest_language = input("Enter the language code to be used for translation: ")
