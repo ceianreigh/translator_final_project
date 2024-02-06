@@ -1,6 +1,7 @@
 # pseudocode
 
 # import the necessary packages
+from googletrans import Translator, LANGUAGES
 
 # define the function that will translate the inputted text
 
