@@ -23,6 +23,7 @@ text = input("Enter the text to be translated: ")
 print("Supported languages: ", LANGUAGES)
 
 # ask the user to input the language they would like to translate to
+dest_language = input("Enter the language code to be used for translation: ")
 
 # call the function to translate the inputted text
 
