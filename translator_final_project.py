@@ -2,6 +2,7 @@
 
 # import the necessary packages
 from googletrans import Translator, LANGUAGES
+import pyttsx3
 
 
 # define the function that will translate the inputted text
@@ -27,6 +28,7 @@ dest_language = input("Enter the language code to be used for translation: ")
 
 # call the function to translate the inputted text
 translated_text = translate_text(text, dest_language)
+speak_text(translated_text)
 
 # print the translated text
 print("Translated text:", translated_text)
