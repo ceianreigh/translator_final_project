@@ -6,6 +6,16 @@ from tkinter import PhotoImage, messagebox, ttk
 from googletrans import Translator, LANGUAGES
 
 
+# define the function that will save the translated text
+def save_translated_text(original_text_entry, translated_text, dest_language_combobox):
+    saved_translation = open("saved_translation.txt", "a")
+    saved_translation.write(
+        f"Original text: {original_text_entry.get()}\nTranslated text: {translated_text.cget('text')}\nLanguage: {dest_language_combobox.get()}\n\n"
+    )
+    saved_translation.close()
+    messagebox.showinfo("Save", "The translated text has been saved.")
+
+
 # define the function that will translate the inputted text
 def translate_text(original_text_entry, dest_language_combobox, translated_text):
     # create a translator object
@@ -80,7 +90,7 @@ def start_translator(icon_image, background_image2):
     translated_text_frame = tk.LabelFrame(
         main_window, text="Translated Text", font=("Arial Italic", 9)
     )
-    translated_text_frame.place(x=297, y=90)
+    translated_text_frame.place(x=297, y=72)
 
     # add the translated text label
     translated_text_label = tk.Label(
@@ -93,6 +103,18 @@ def start_translator(icon_image, background_image2):
         translated_text_frame, text="", font=("Century Gothic Bold", 12)
     )
     translated_text.pack(padx=5, pady=5)
+
+    # add a save button
+    save_button = tk.Button(
+        translated_text_frame,
+        text="Save",
+        font=("Arial Italic", 10),
+        width=12,
+        command=lambda: save_translated_text(
+            original_text_entry, translated_text, dest_language_combobox
+        ),
+    )
+    save_button.pack(padx=5, pady=5)
 
     # add a done button
     done_button = tk.Button(
