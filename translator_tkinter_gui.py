@@ -30,6 +30,12 @@ dest_language_combobox = ttk.Combobox(
 )
 dest_language_combobox.pack()
 
+# add the translate button
+translate_button = tk.Button(
+    original_text_frame, text="Translate", command=translate_text
+)
+translate_button.pack()
+
 # add frame for translated text
 translated_text_frame = tk.LabelFrame(window, text="Translated Text")
 translated_text_frame.pack()
