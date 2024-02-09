@@ -23,7 +23,7 @@ def translate_text():
 # create the window
 window = tk.Tk()
 window.title("CTranslator")
-window.geometry("310x300")
+window.geometry("400x180")
 
 # add a heading
 heading = tk.Label(
@@ -36,7 +36,11 @@ original_text_frame = tk.LabelFrame(window, text="Original Text")
 original_text_frame.place(x=10, y=40)
 
 # add the original text label
-original_text = tk.Label(original_text_frame, text="Enter the text to be translated: ")
+original_text = tk.Label(
+    original_text_frame,
+    text="Enter the text to be translated: ",
+    font=("Century Gothic", 12),
+)
 original_text.pack()
 
 # add the original text entry
@@ -44,7 +48,9 @@ original_text_entry = tk.Entry(original_text_frame)
 original_text_entry.pack()
 
 # add the desired language label
-dest_language = tk.Label(original_text_frame, text="Choose the language: ")
+dest_language = tk.Label(
+    original_text_frame, text="Choose the language: ", font=("Century Gothic", 12)
+)
 dest_language.pack()
 
 # add combobox for the desired language
@@ -64,11 +70,15 @@ translated_text_frame = tk.LabelFrame(window, text="Translated Text")
 translated_text_frame.place(x=207, y=60)
 
 # add the translated text label
-translated_text_label = tk.Label(translated_text_frame, text="Translated Text: ")
+translated_text_label = tk.Label(
+    translated_text_frame, text="Translated Text: ", font=("Century Gothic", 12)
+)
 translated_text_label.pack()
 
 # display the translated text
-translated_text = tk.Label(translated_text_frame, text="")
+translated_text = tk.Label(
+    translated_text_frame, text="", font=("Century Gothic Bold", 12)
+)
 translated_text.pack()
 
 # add a done button
