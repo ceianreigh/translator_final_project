@@ -125,13 +125,17 @@ background_image2 = PhotoImage(
 start_button = tk.Button(
     window,
     text="Start",
+    font=("Arial Italic", 11),
+    width=10,
     command=lambda: start_translator(icon_image, background_image2),
 )
-start_button.pack()
+start_button.place(x=118, y=210)
 
 # add exit button
-exit_button = tk.Button(window, text="Exit", command=window.quit)
-exit_button.pack()
+exit_button = tk.Button(
+    window, text="Exit", font=("Arial Italic", 11), width=10, command=window.quit
+)
+exit_button.place(x=240, y=210)
 
 # add the main loop
 window.mainloop()
