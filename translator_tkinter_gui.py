@@ -60,7 +60,7 @@ def start_translator(icon_image, background_image2):
 
     # add combobox for the desired language
     dest_language_combobox = ttk.Combobox(
-        original_text_frame, values=list(LANGUAGES.values())
+        original_text_frame, width=34, values=list(LANGUAGES.values())
     )
     dest_language_combobox.pack(padx=3, pady=3)
 
@@ -68,6 +68,7 @@ def start_translator(icon_image, background_image2):
     translate_button = tk.Button(
         original_text_frame,
         text="Translate",
+        width=15,
         command=lambda: translate_text(
             original_text_entry, dest_language_combobox, translated_text
         ),
@@ -98,6 +99,7 @@ def start_translator(icon_image, background_image2):
         translated_text_frame,
         text="Done",
         font=("Arial Italic", 10),
+        width=12,
         command=window.quit,
     )
     done_button.pack(padx=5, pady=5)
