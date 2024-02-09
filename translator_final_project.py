@@ -29,6 +29,9 @@ def speak_text(text):
     # speak the translated text
     text_to_speech.say(text)
 
+    # run the text-to-speech object
+    text_to_speech.runAndWait()
+
 
 # ask the user to input the text they would like to translate
 to_translate = input("Enter the text to be translated: ")
