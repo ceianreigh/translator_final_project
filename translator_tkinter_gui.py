@@ -23,6 +23,7 @@ def translate_text():
 # create the window
 window = tk.Tk()
 window.title("CTranslator")
+window.geometry("500x300")
 
 # add frame for original text
 original_text_frame = tk.LabelFrame(window, text="Original Text")
