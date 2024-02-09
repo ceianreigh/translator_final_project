@@ -41,6 +41,8 @@ dest_language = input("Enter the language code to be used for translation: ")
 
 # call the function to translate the inputted text
 translated_text = translate_text(text, dest_language)
+
+# call the function to speak the translated text
 speak_text(translated_text)
 
 # print the translated text
