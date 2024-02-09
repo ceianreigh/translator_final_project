@@ -62,7 +62,9 @@ def start_translator(icon_image, background_image2):
 
     # add the original text entry
     original_text_entry = tk.Entry(
-        original_text_frame, width=25, font=("Century Gothic Bold", 12)
+        original_text_frame,
+        width=25,
+        font=("Century Gothic Bold", 12),
     )
     original_text_entry.pack(padx=3, pady=3)
 
@@ -78,7 +80,9 @@ def start_translator(icon_image, background_image2):
 
     # add combobox for the desired language
     dest_language_combobox = ttk.Combobox(
-        original_text_frame, width=34, values=list(LANGUAGES.values())
+        original_text_frame,
+        width=34,
+        values=list(LANGUAGES.values()),
     )
     dest_language_combobox.pack(padx=3, pady=3)
 

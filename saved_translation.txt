@@ -1,0 +1,4 @@
+Original text: How are you?
+Translated text: Apa kabarmu?
+Language: indonesian
+
