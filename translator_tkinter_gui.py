@@ -64,5 +64,10 @@ translated_text_label.pack()
 translated_text = tk.Label(translated_text_frame, text="")
 translated_text.pack()
 
+
+# add a done button
+done_button = tk.Button(window, text="Done", command=window.quit)
+done_button.pack()
+
 # add the main loop
 window.mainloop()
