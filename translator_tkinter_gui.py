@@ -20,13 +20,15 @@ def translate_text(original_text_entry, dest_language_combobox, translated_text)
     translated_text.config(text=translated.text)
 
 
-def start_translator(icon_image):
+def start_translator(icon_image, background_image):
     # create the main window
     main_window = tk.Toplevel()
     main_window.title("CTranslator")
     main_window.geometry("460x260")
     main_window.resizable(False, False)
     main_window.iconphoto(False, icon_image)
+    background_image_label = tk.Label(main_window, image=background_image)
+    background_image_label.place(relwidth=1, relheight=1)
 
     # add a heading
     heading = tk.Label(
@@ -116,10 +118,15 @@ icon_image = PhotoImage(
     file="C:\\Users\\Ceian Cepillo\\Documents\\translator_final_project\\ctranslator_icon.png.png"
 )
 window.iconphoto(False, icon_image)
+background_image = PhotoImage(
+    file="C:\\Users\\Ceian Cepillo\\Documents\\translator_final_project\\ctranslator_background.png"
+)
+background_image_label = tk.Label(window, image=background_image)
+background_image_label.place(relwidth=1, relheight=1)
 
 # add a start button
 start_button = tk.Button(
-    window, text="Start", command=lambda: start_translator(icon_image)
+    window, text="Start", command=lambda: start_translator(icon_image, background_image)
 )
 start_button.pack()
 
