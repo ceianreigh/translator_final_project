@@ -25,9 +25,15 @@ window = tk.Tk()
 window.title("CTranslator")
 window.geometry("310x300")
 
+# add a heading
+heading = tk.Label(
+    window, text="Welcome to CTranslator", font=("Bernard MT Condensed", 24)
+)
+heading.place(x=7, y=0)
+
 # add frame for original text
 original_text_frame = tk.LabelFrame(window, text="Original Text")
-original_text_frame.grid(row=0, column=0, padx=10, pady=10)
+original_text_frame.place(x=10, y=40)
 
 # add the original text label
 original_text = tk.Label(original_text_frame, text="Enter the text to be translated: ")
@@ -55,7 +61,7 @@ translate_button.pack()
 
 # add frame for translated text
 translated_text_frame = tk.LabelFrame(window, text="Translated Text")
-translated_text_frame.grid(row=0, column=1, padx=10, pady=10)
+translated_text_frame.place(x=207, y=60)
 
 # add the translated text label
 translated_text_label = tk.Label(translated_text_frame, text="Translated Text: ")
@@ -64,7 +70,6 @@ translated_text_label.pack()
 # display the translated text
 translated_text = tk.Label(translated_text_frame, text="")
 translated_text.pack()
-
 
 # add a done button
 done_button = tk.Button(translated_text_frame, text="Done", command=window.quit)
