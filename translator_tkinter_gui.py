@@ -20,5 +20,9 @@ original_text.pack()
 original_text_entry = tk.Entry(original_text_frame)
 original_text_entry.pack()
 
+# add frame for translated text
+translated_text_frame = tk.LabelFrame(window, text="Translated Text")
+translated_text_frame.pack()
+
 # add the main loop
 window.mainloop()
