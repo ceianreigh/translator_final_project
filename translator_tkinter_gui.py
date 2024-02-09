@@ -23,13 +23,13 @@ def translate_text():
 # create the window
 window = tk.Tk()
 window.title("CTranslator")
-window.geometry("440x200")
+window.geometry("460x260")
 
 # add a heading
 heading = tk.Label(
     window, text="Welcome to CTranslator", font=("Bernard MT Condensed", 30)
 )
-heading.place(x=26, y=0)
+heading.place(x=45, y=0)
 
 # add frame for original text
 original_text_frame = tk.LabelFrame(
@@ -76,7 +76,7 @@ translate_button.pack(padx=5, pady=5)
 translated_text_frame = tk.LabelFrame(
     window, text="Translated Text", font=("Arial Italic", 9)
 )
-translated_text_frame.place(x=288, y=73)
+translated_text_frame.place(x=297, y=90)
 
 # add the translated text label
 translated_text_label = tk.Label(
