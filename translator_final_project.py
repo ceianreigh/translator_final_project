@@ -18,7 +18,7 @@ def translate_text(text, dest_language):
 
 
 # define the function that will speak the translated text
-def speak_text(translated_text):
+def speak_text(text):
     # create a text-to-speech object
     text_to_speech = pyttsx3.init()
 
@@ -27,11 +27,11 @@ def speak_text(translated_text):
     text_to_speech.setProperty("volume", 0.9)
 
     # speak the translated text
-    text_to_speech.say(translated_text)
+    text_to_speech.say(text)
 
 
 # ask the user to input the text they would like to translate
-text = input("Enter the text to be translated: ")
+to_translate = input("Enter the text to be translated: ")
 
 # print the supported languages
 print("Supported languages:", LANGUAGES)
@@ -40,10 +40,13 @@ print("Supported languages:", LANGUAGES)
 dest_language = input("Enter the language code to be used for translation: ")
 
 # call the function to translate the inputted text
-translated_text = translate_text(text, dest_language)
+translated_text = translate_text(to_translate, dest_language)
 
 # print the original text
-print("Original text: ", text)
+print("Original text: ", to_translate)
+
+# call the function to speak the original text
+speak_text(to_translate)
 
 # print the translated text
 print("Translated text:", translated_text)
