@@ -3,6 +3,7 @@
 # import the necessary packages
 import tkinter as tk
 from tkinter import PhotoImage, messagebox, ttk
+from googletrans import Translator, LANGUAGES
 
 # create the window
 window = tk.Tk()
