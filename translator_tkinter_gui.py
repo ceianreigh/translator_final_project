@@ -103,5 +103,11 @@ done_button = tk.Button(
 )
 done_button.pack(padx=5, pady=5)
 
+# create the initial window
+window = tk.Tk()
+window.title("CTranslator")
+window.geometry("460x260")
+
+
 # add the main loop
 window.mainloop()
