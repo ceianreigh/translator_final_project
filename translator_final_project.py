@@ -45,5 +45,8 @@ translated_text = translate_text(text, dest_language)
 # call the function to speak the translated text
 speak_text(translated_text)
 
+# print the original text
+print("Original text: ", text)
+
 # print the translated text
 print("Translated text:", translated_text)
