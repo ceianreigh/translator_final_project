@@ -2,7 +2,7 @@
 
 # import the necessary packages
 import tkinter as tk
-from tkinter import PhotoImage, messagebox
+from tkinter import PhotoImage, messagebox, ttk
 
 # create the window
 window = tk.Tk()
@@ -23,6 +23,12 @@ original_text_entry.pack()
 # add the desired language label
 dest_language = tk.Label(original_text_frame, text="Choose the language: ")
 dest_language.pack()
+
+# add combobox for the desired language
+dest_language_combobox = ttk.Combobox(
+    original_text_frame, values=list(LANGUAGES.values())
+)
+dest_language_combobox.pack()
 
 # add frame for translated text
 translated_text_frame = tk.LabelFrame(window, text="Translated Text")
