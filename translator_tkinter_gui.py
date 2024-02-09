@@ -30,17 +30,11 @@ def start_translator(icon_image, background_image2):
     background_image2_label = tk.Label(main_window, image=background_image2)
     background_image2_label.place(relwidth=1, relheight=1)
 
-    # add a heading
-    heading = tk.Label(
-        main_window, text="Welcome to CTranslator", font=("Bernard MT Condensed", 30)
-    )
-    heading.place(x=45, y=0)
-
     # add frame for original text
     original_text_frame = tk.LabelFrame(
         main_window, text="Original Text", font=("Arial Italic", 9)
     )
-    original_text_frame.place(x=10, y=50)
+    original_text_frame.place(x=10, y=65)
 
     # add the original text label
     original_text = tk.Label(
@@ -48,13 +42,13 @@ def start_translator(icon_image, background_image2):
         text="Enter the text to be translated: ",
         font=("Montserrat Medium", 12),
     )
-    original_text.pack(padx=5, pady=5)
+    original_text.pack(padx=3, pady=3)
 
     # add the original text entry
     original_text_entry = tk.Entry(
         original_text_frame, width=25, font=("Century Gothic Bold", 12)
     )
-    original_text_entry.pack(padx=5, pady=5)
+    original_text_entry.pack(padx=3, pady=3)
 
     # add the desired language label
     dest_language = tk.Label(
@@ -62,13 +56,13 @@ def start_translator(icon_image, background_image2):
         text="Choose the language: ",
         font=("Montserrat Medium", 12),
     )
-    dest_language.pack(padx=5, pady=5)
+    dest_language.pack(padx=3, pady=3)
 
     # add combobox for the desired language
     dest_language_combobox = ttk.Combobox(
         original_text_frame, values=list(LANGUAGES.values())
     )
-    dest_language_combobox.pack(padx=5, pady=5)
+    dest_language_combobox.pack(padx=3, pady=3)
 
     # add the translate button
     translate_button = tk.Button(
@@ -79,7 +73,7 @@ def start_translator(icon_image, background_image2):
         ),
         font=("Arial Italic", 12),
     )
-    translate_button.pack(padx=5, pady=5)
+    translate_button.pack(padx=3, pady=3)
 
     # add frame for translated text
     translated_text_frame = tk.LabelFrame(
