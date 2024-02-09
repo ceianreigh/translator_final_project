@@ -24,6 +24,13 @@ def translate_text():
 window = tk.Tk()
 window.title("CTranslator")
 window.geometry("460x260")
+window.resizable(False, False)
+window.iconphoto(
+    False,
+    PhotoImage(
+        file="C:\\Users\\Ceian Cepillo\\Documents\\translator_final_project\\ctranslator_icon.png.png"
+    ),
+)
 
 # add a heading
 heading = tk.Label(
