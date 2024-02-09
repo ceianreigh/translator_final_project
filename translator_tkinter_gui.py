@@ -119,6 +119,8 @@ window.iconphoto(
 start_button = tk.Button(window, text="Start")
 start_button.pack()
 
+# add exit button
+exit_button = tk.Button(window, text="Exit", command=window.quit)
 
 # add the main loop
 window.mainloop()
