@@ -20,6 +20,10 @@ original_text.pack()
 original_text_entry = tk.Entry(original_text_frame)
 original_text_entry.pack()
 
+# add the desired language label
+dest_language = tk.Label(original_text_frame, text="Choose the language: ")
+dest_language.pack()
+
 # add frame for translated text
 translated_text_frame = tk.LabelFrame(window, text="Translated Text")
 translated_text_frame.pack()
