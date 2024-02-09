@@ -121,6 +121,7 @@ start_button.pack()
 
 # add exit button
 exit_button = tk.Button(window, text="Exit", command=window.quit)
+exit_button.pack()
 
 # add the main loop
 window.mainloop()
