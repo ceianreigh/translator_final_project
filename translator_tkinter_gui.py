@@ -24,8 +24,12 @@ original_text_entry.pack()
 translated_text_frame = tk.LabelFrame(window, text="Translated Text")
 translated_text_frame.pack()
 
-# add the translated text label where the translated text will be displayed
-translated_text = tk.Label(translated_text_frame, text="Translated Text: ")
+# add the translated text label
+translated_text_label = tk.Label(translated_text_frame, text="Translated Text: ")
+translated_text_label.pack()
+
+# display the translated text
+translated_text = tk.Label(translated_text_frame, text="")
 translated_text.pack()
 
 # add the main loop
