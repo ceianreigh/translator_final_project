@@ -107,6 +107,17 @@ done_button.pack(padx=5, pady=5)
 window = tk.Tk()
 window.title("CTranslator")
 window.geometry("460x260")
+window.resizable(False, False)
+window.iconphoto(
+    False,
+    PhotoImage(
+        file="C:\\Users\\Ceian Cepillo\\Documents\\translator_final_project\\ctranslator_icon.png.png"
+    ),
+)
+
+# add a start button
+start_button = tk.Button(window, text="Start")
+start_button.pack()
 
 
 # add the main loop
