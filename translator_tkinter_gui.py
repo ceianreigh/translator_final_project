@@ -8,5 +8,10 @@ from tkinter import PhotoImage, messagebox
 window = tk.Tk()
 window.title("CTranslator")
 
+# add frame for original text
+original_text_frame = tk.LabelFrame(window, text="Original Text")
+original_text_frame.pack()
+
+
 # add the main loop
 window.mainloop()
