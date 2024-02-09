@@ -5,6 +5,21 @@ import tkinter as tk
 from tkinter import PhotoImage, messagebox, ttk
 from googletrans import Translator, LANGUAGES
 
+
+# define the function that will translate the inputted text
+def translate_text():
+    # create a translator object
+    translator = Translator()
+
+    # translate the inputted text to the desired language
+    translated = translator.translate(
+        original_text_entry.get(), dest=dest_language_combobox.get()
+    )
+
+    # return the translated text
+    translated_text.config(text=translated.text)
+
+
 # create the window
 window = tk.Tk()
 window.title("CTranslator")
