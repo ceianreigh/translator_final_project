@@ -42,7 +42,11 @@ def start_translator(icon_image, background_image2):
 
     # add frame for original text
     original_text_frame = tk.LabelFrame(
-        main_window, text="Original Text", font=("Arial Italic", 9)
+        main_window,
+        text="Original Text",
+        font=("Arial Italic", 9),
+        bg="#06265a",
+        fg="white",
     )
     original_text_frame.place(x=10, y=65)
 
@@ -51,6 +55,8 @@ def start_translator(icon_image, background_image2):
         original_text_frame,
         text="Enter the text to be translated: ",
         font=("Montserrat Medium", 12),
+        bg="#06265a",
+        fg="white",
     )
     original_text.pack(padx=3, pady=3)
 
@@ -65,6 +71,8 @@ def start_translator(icon_image, background_image2):
         original_text_frame,
         text="Choose the language: ",
         font=("Montserrat Medium", 12),
+        bg="#06265a",
+        fg="white",
     )
     dest_language.pack(padx=3, pady=3)
 
@@ -79,6 +87,8 @@ def start_translator(icon_image, background_image2):
         original_text_frame,
         text="Translate",
         width=15,
+        bg="#030a16",
+        fg="white",
         command=lambda: translate_text(
             original_text_entry, dest_language_combobox, translated_text
         ),
@@ -88,19 +98,31 @@ def start_translator(icon_image, background_image2):
 
     # add frame for translated text
     translated_text_frame = tk.LabelFrame(
-        main_window, text="Translated Text", font=("Arial Italic", 9)
+        main_window,
+        text="Translated Text",
+        font=("Arial Italic", 9),
+        bg="#06265a",
+        fg="white",
     )
     translated_text_frame.place(x=297, y=72)
 
     # add the translated text label
     translated_text_label = tk.Label(
-        translated_text_frame, text="Translated Text: ", font=("Montserrat Medium", 12)
+        translated_text_frame,
+        text="Translated Text: ",
+        font=("Montserrat Medium", 12),
+        bg="#06265a",
+        fg="white",
     )
     translated_text_label.pack(padx=5, pady=5)
 
     # display the translated text
     translated_text = tk.Label(
-        translated_text_frame, text="", font=("Century Gothic Bold", 12)
+        translated_text_frame,
+        text="",
+        font=("Century Gothic Bold", 12),
+        bg="#06265a",
+        fg="white",
     )
     translated_text.pack(padx=5, pady=5)
 
@@ -110,6 +132,8 @@ def start_translator(icon_image, background_image2):
         text="Save",
         font=("Arial Italic", 10),
         width=12,
+        bg="#030a16",
+        fg="white",
         command=lambda: save_translated_text(
             original_text_entry, translated_text, dest_language_combobox
         ),
@@ -122,6 +146,8 @@ def start_translator(icon_image, background_image2):
         text="Done",
         font=("Arial Italic", 10),
         width=12,
+        bg="#030a16",
+        fg="white",
         command=window.quit,
     )
     done_button.pack(padx=5, pady=5)
@@ -151,13 +177,21 @@ start_button = tk.Button(
     text="Start",
     font=("Arial Italic", 11),
     width=10,
+    bg="#030a16",
+    fg="white",
     command=lambda: start_translator(icon_image, background_image2),
 )
 start_button.place(x=118, y=210)
 
 # add exit button
 exit_button = tk.Button(
-    window, text="Exit", font=("Arial Italic", 11), width=10, command=window.quit
+    window,
+    text="Exit",
+    font=("Arial Italic", 11),
+    width=10,
+    bg="#030a16",
+    fg="white",
+    command=window.quit,
 )
 exit_button.place(x=240, y=210)
 
