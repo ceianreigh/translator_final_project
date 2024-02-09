@@ -108,15 +108,13 @@ window = tk.Tk()
 window.title("CTranslator")
 window.geometry("460x260")
 window.resizable(False, False)
-window.iconphoto(
-    False,
-    PhotoImage(
-        file="C:\\Users\\Ceian Cepillo\\Documents\\translator_final_project\\ctranslator_icon.png.png"
-    ),
+icon_image = PhotoImage(
+    file="C:\\Users\\Ceian Cepillo\\Documents\\translator_final_project\\ctranslator_icon.png.png"
 )
+window.iconphoto(False, icon_image)
 
 # add a start button
-start_button = tk.Button(window, text="Start")
+start_button = tk.Button(window, text="Start", command=start_translator())
 start_button.pack()
 
 # add exit button
