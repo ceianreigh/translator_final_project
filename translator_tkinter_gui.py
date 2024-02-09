@@ -46,7 +46,9 @@ original_text = tk.Label(
 original_text.pack()
 
 # add the original text entry
-original_text_entry = tk.Entry(original_text_frame)
+original_text_entry = tk.Entry(
+    original_text_frame, width=25, font=("Century Gothic Bold", 12)
+)
 original_text_entry.pack()
 
 # add the desired language label
